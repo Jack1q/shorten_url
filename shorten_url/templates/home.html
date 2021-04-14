@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>URL Shortener</h1>
+    <div class="box">
+        <h2>Enter URL</h2>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="flaskform">
+                {{ form.url }}
+                {% if form.url.errors %}
+                    <br>
+                    <br>
+                    {% for error in form.url.errors %}
+                        <span><b>{{ error }}</b></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="flaskform">
+                {{ form.submit(class="btn") }}
+            </div>
+        </form>
+        <div class="flaskform">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <span><b>{{ message }}</b></span>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}

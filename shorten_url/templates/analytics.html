@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>URL Redirect Analytics</h1>
+    <h2 style="color: green;">{{ url_data.true_url }}</h2>
+    <div class="box">
+        <p>Redirects: {{ url_data.visits }}</p>
+    </div>
+{% endblock %}

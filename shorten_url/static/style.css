@@ -1,0 +1,21 @@
+h1, h2, .flaskform, span {
+    text-align: center;
+    font-family: monospace;
+}
+
+p {
+    font-family: monospace;
+    padding-left: 5%;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.box {
+    width: 40%;
+    border: 4px dashed grey;
+    margin: auto;
+}
